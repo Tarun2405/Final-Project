@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lights Out Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Lights Out Game</h1>
+        <p>Click on the squares to toggle their state. Turn off all the lights to win!</p>
+    </header>
+
+    <section class="game">
+        <table id="game-board">
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Addendum Section for Display -->
+    <section class="addendum">
+        <h2>Addendum: Development Process and Creative Choices</h2>
+        <p><strong>Process & Creative Choices:</strong></p>
+        <ul>
+            <li><strong>Game Setup:</strong> I started by creating the basic structure for the Lights Out game. I chose a 5x5 grid for a balanced level of challenge and manageability.</li>
+            <li><strong>Random Configuration:</strong> The board starts white, and random "clicks" are simulated to toggle squares, ensuring the puzzle is solvable upon loading.</li>
+            <li><strong>CSS Styling:</strong> The styling focuses on clear visibility of the grid. Squares toggle between black and white when clicked, using smooth transitions.</li>
+            <li><strong>Game Logic:</strong> A 2D array is used to track the state of each square. Clicking a square toggles its state and that of its neighboring squares. The game ends when all squares are off.</li>
+            <li><strong>Challenges:</strong> One challenge was ensuring the board is always solvable. By simulating clicks on a solved board, I ensure that the game is always winnable.</li>
+            <li><strong>Insights:</strong> The process highlighted the importance of structuring game logic effectively. It also demonstrated how to manage event-driven behavior and ensure smooth user interaction.</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>Last updated: <span id="lastModified"></span></p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script type="text/javascript">
+        var x = document.lastModified;
+        document.getElementById('lastModified').textContent = x;
+    </script>
+</body>
+</html>
